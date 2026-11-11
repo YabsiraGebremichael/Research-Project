@@ -1,73 +1,102 @@
-# Secrets - never commit API tokens
+# ---------------------------------------------------------------------------
+# Secrets. Never commit API tokens.
+# ---------------------------------------------------------------------------
 .env
 *.env
 proj.env
 
+# ---------------------------------------------------------------------------
 # Python
+# ---------------------------------------------------------------------------
 __pycache__/
 *.pyc
 .pytest_cache/
 .venv/
 venv/
 
-# OS and editor
+# ---------------------------------------------------------------------------
+# Jupyter, OS and editor
+# ---------------------------------------------------------------------------
+.ipynb_checkpoints/
 Thumbs.db
 .DS_Store
-.ipynb_checkpoints/
 
 # ---------------------------------------------------------------------------
-# Provider market data and anything derived row-by-row from it.
-# Not redistributable. Regenerate with scripts/pipeline/ and a provider key.
+# Provider market data, and the panels, contexts and schedules derived from it.
+# Not redistributable. Rebuild with scripts/pipeline/ and a provider key.
 # ---------------------------------------------------------------------------
 Data/raw/yahoo/
 Data/raw/dataset_d_eodhd/
 Data/raw/recovered_sources/
 Data/processed/
 Data/contexts/
-Data/validation_contexts/*_context.csv
+Data/validation_contexts/
+Data/metadata/diagnostics/
+Data/metadata/m6_round_schedule.csv
+Data/metadata/feature_baseline_origin_schedule.csv
+
+# Model-input datasets generated for fine-tuning and the benchmarks.
 TSFM Uncertainty Experiment/data/
-
-# Third-party reference implementations and reference data, kept locally.
-Relevant Context/
-Quasi-Average Reimplementation/
-Competition Benchmark/
-Competition Benchmark Reference/
-FinQ-Boost/
-RPS Reference/
-FinQ Boost Reimplementation/validation/
+Quasi-Average Reimplementation DRE-as-Stock/data/
 
 # ---------------------------------------------------------------------------
-# Research report: sources, PDFs and LaTeX build artefacts, kept locally.
+# Generated logs and narrative reports, rebuilt by the scripts.
 # ---------------------------------------------------------------------------
-Research Report/
-Research Report Revised/
-Report Revised 2/
-Report Revised 3/
-Report Revised 4/
-Report Revised Improvements/
-Report Revised Clean Improvements/
-Report Revised Clean Improvements Final/
-*.aux
-*.bbl
-*.blg
-*.out
-*.synctex.gz
-*.toc
-*.fdb_latexmk
-*.fls
-
-# ---------------------------------------------------------------------------
-# Internal working material, kept locally.
-# ---------------------------------------------------------------------------
-Temporary/
-check/
-tests/
-CLAUDE.md
-
-# Generated run output: logs and narrative reports are rebuilt by the scripts.
 logs/
 reports/
 *.log
 
-# Derived adjusted-close panel, rebuilt by quasi_average.py from Dataset D.
-Quasi-Average Reimplementation DRE-as-Stock/data/
+# ---------------------------------------------------------------------------
+# Generated experimental output. Every path below is a write location in the
+# scripts or notebooks and is reproduced by running the workflow.
+# ---------------------------------------------------------------------------
+
+# Shared M6 evaluation
+Evaluation Results/
+
+# Zero-shot inference, reconstructed scenarios and scenario-count scoring
+TSFM Inference and Sampling/inference_outputs/
+TSFM Inference and Sampling/scenario_outputs/
+TSFM Inference and Sampling/results/
+TSFM Inference and Sampling/chronos2_sampling_comparison/results/
+
+# Sampling interventions and Chronos-2 low-rank adaptation
+TSFM Uncertainty Experiment/model_outputs/
+TSFM Uncertainty Experiment/artifacts/
+TSFM Uncertainty Experiment/results/
+TSFM Uncertainty Experiment/visuals/
+
+# Feature baselines
+Feature Baselines/tuning/
+Feature Baselines/results/
+
+# Competition reimplementations
+FinQ Boost Reimplementation/finqboost_m6_predictions.csv
+FinQ Boost Reimplementation/finqboost_m6_rps.csv
+FinQ Boost Reimplementation/seed_sensitivity.csv
+Quasi-Average Reimplementation DRE-as-Stock/results/
+
+# Horizon experiment. The tracked placeholder is kept.
+Horizon Experiment/results/*
+!Horizon Experiment/results/.gitkeep
+Horizon Experiment/visualisations/
+
+# Probability-shrinkage sweep
+TSFM Calibration Experiment/results/
+TSFM Calibration Experiment/tables/
+TSFM Calibration Experiment/figures/
+
+# Paired statistical analysis
+Statistical Analysis/results/
+
+# Report figures and tables. The tracked placeholder is kept.
+Competition Visuals/figures/
+Competition Visuals/tables/*
+!Competition Visuals/tables/.gitkeep
+
+# ---------------------------------------------------------------------------
+# Local research-report folders and drafts, kept outside the repository.
+# ---------------------------------------------------------------------------
+Research Report*/
+Report*/
+Final Research Report*/
