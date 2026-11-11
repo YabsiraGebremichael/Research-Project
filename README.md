@@ -7,8 +7,6 @@ University of the Witwatersrand.
 
 Author: Yabsira Gebremichael (2661262). Supervisor: Dr. Hairong Bau.
 
-Repository: https://github.com/YabsiraGebremichael/Research-Project
-
 ---
 
 ## Overview
@@ -54,7 +52,7 @@ The feature-based baselines read daily log returns, close, adjusted close and vo
 
 - [`Data/raw/m6_official/assets_m6.csv`](Data/raw/m6_official/assets_m6.csv), the official M6 asset and price file published by the competition organisers. It is the tracked official outcome file and the sole source of realised returns and ground-truth quintiles. It is not provider data.
 - [`Data/metadata/m6_asset_metadata.csv`](Data/metadata/m6_asset_metadata.csv), the 100-asset universe in official order with sector and asset-class labels.
-- [`Competition Visuals/system_overview/`](Competition%20Visuals/system_overview/), the hand-authored pipeline diagram in SVG and PNG.
+- [`Competition Visuals/system_overview/`](Competition%20Visuals/system_overview/), the pipeline diagram in SVG and PNG.
 
 **Not included.** Yahoo Finance and EODHD provider data are not distributed. Neither are the panels, contexts and benchmark datasets derived row by row from them, which the pipeline scripts generate locally.
 
@@ -375,25 +373,6 @@ Run each notebook from within its own directory, which is where its relative pat
 1. `Competition Visuals/competition_visuals.ipynb`: the cross-model tables and figures.
 2. `Competition Visuals/horizon_visualisations.ipynb`: the report-ready horizon figures.
 3. `Horizon Experiment/horizon_visualisations.ipynb`: optional, the working diagnostic version.
-
-### Rerun guidance
-
-**Two output folders accumulate rather than overwrite.** Before a clean full rerun, empty them, or a partial rerun at a different sample count will leave earlier artifacts beside the new ones:
-
-- `TSFM Inference and Sampling/scenario_outputs/`
-- `TSFM Uncertainty Experiment/model_outputs/`
-
-**Three scripts refuse to replace an existing target** and stop with a message naming the file. On a first clean run this never triggers. On a rerun, delete the named files first:
-
-| Script | Targets it will not overwrite |
-|---|---|
-| `scripts/pipeline/build_validation_contexts.py` | `Data/validation_contexts/validation_*_context.csv` |
-| `Statistical Analysis/paired_rps_visualisation.py` | `Competition Visuals/figures/paired_rps_effects_forest.png`, `Competition Visuals/tables/paired_rps_primary_statistics.csv`, `Competition Visuals/tables/paired_rps_primary_statistics.png` |
-| `Statistical Analysis/build_sampling_ablation_table.py` | `Competition Visuals/tables/sampling_factorial_ablation_compact.png`, `.csv` and `.tex` |
-
-Every other output-generating script creates its own output directory and overwrites its result files in place, so repeated runs are safe.
-
-These instructions were derived from the final code and its artefact dependencies, by tracing what each script and notebook reads and writes. The complete GPU workflow is not covered by an automated end-to-end test: inference and LoRA training need a GPU and provider access, so those stages are verified by their own recorded diagnostics rather than by a test runner.
 
 ## Outputs produced by a full run
 

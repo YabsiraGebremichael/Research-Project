@@ -94,9 +94,4 @@ Competition Visuals/figures/
 Competition Visuals/tables/*
 !Competition Visuals/tables/.gitkeep
 
-# ---------------------------------------------------------------------------
-# Local research-report folders and drafts, kept outside the repository.
-# ---------------------------------------------------------------------------
-Research Report*/
-Report*/
-Final Research Report*/
+
