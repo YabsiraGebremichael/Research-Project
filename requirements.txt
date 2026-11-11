@@ -1,0 +1,26 @@
+# CPU pipeline: data preparation, benchmarks, scoring, statistics, visuals.
+# Versions are pinned where the repository records the version actually used.
+pandas>=2.2
+numpy>=1.26
+scipy>=1.11
+scikit-learn==1.4.2
+lightgbm==4.7.0
+xgboost==3.2.0
+hyperopt>=0.2.7
+matplotlib>=3.8
+requests>=2.31
+python-dotenv>=1.0
+yfinance>=1.5
+
+# Notebook execution (Competition Visuals and the Horizon visualisations).
+jupyter-client>=8.6
+ipykernel>=6.29
+nbformat>=5.10
+nbclient>=0.10
+
+# GPU only. Installed inside the Colab notebooks for TSFM inference and the
+# Chronos-2 LoRA runs; not needed for the CPU pipeline above.
+# torch>=2.11
+# transformers>=4.44
+# chronos-forecasting==2.3.1
+# peft==0.21.0

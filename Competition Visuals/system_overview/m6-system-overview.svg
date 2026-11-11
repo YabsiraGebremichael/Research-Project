@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1540" height="780" viewBox="0 0 1540 780" role="img" aria-labelledby="title desc">
+<title id="title">M6 research system overview</title>
+<desc id="desc">Historical Yahoo Finance and EODHD market data are prepared for zero-shot time-series foundation models and benchmarks. Foundation-model return scenarios are ranked to estimate quintile probabilities; benchmarks produce probabilities directly. Ranked Probability Score evaluates the forecasts against official M6 outcomes over twelve rounds. Retrospective diagnostics motivate sampling and LoRA interventions, which are assessed through the same M6 evaluation.</desc>
+<rect x="0" y="0" width="1540" height="780" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.6"/>
+<rect x="24" y="13" width="40" height="36" rx="7" fill="#183249" stroke="none" stroke-width="1.6"/>
+<text x="44" y="40" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22.5" font-weight="700" text-anchor="middle">01</text>
+<text x="80" y="40" fill="#183249" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">EVALUATE</text>
+<polyline points="241,31 1045,31" fill="none" stroke="#B7C6D0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1516" y="40" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" text-anchor="end">100 assets  |  20-day horizon</text>
+<text x="24" y="87" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="22.5" font-weight="700" text-anchor="start">DATA &amp; PREPARATION</text>
+<text x="368" y="87" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="22.5" font-weight="700" text-anchor="start">FORECASTING</text>
+<text x="767" y="87" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="22.5" font-weight="700" text-anchor="start">M6 PROBABILITIES</text>
+<text x="1166" y="87" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="22.5" font-weight="700" text-anchor="start">SCORING</text>
+<rect x="24" y="110" width="290" height="322" rx="10" fill="#F3F6F8" stroke="#B7C6D0" stroke-width="1.6"/>
+<rect x="368" y="110" width="345" height="174" rx="10" fill="#F3F6F8" stroke="#B7C6D0" stroke-width="1.6"/>
+<rect x="368" y="310" width="345" height="122" rx="10" fill="#FFFFFF" stroke="#B7C6D0" stroke-width="1.6"/>
+<rect x="767" y="110" width="345" height="174" rx="10" fill="#F3F6F8" stroke="#B7C6D0" stroke-width="1.6"/>
+<rect x="767" y="330" width="345" height="102" rx="10" fill="#183249" stroke="#183249" stroke-width="1.6"/>
+<rect x="1166" y="110" width="350" height="322" rx="10" fill="#F3F6F8" stroke="#B7C6D0" stroke-width="1.6"/>
+<text x="48" y="151" fill="#183249" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Market data</text>
+<text x="48" y="187" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" text-anchor="start">Yahoo Finance</text>
+<text x="48" y="217" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" text-anchor="start">EODHD</text>
+<polyline points="48,237 290,237" fill="none" stroke="#B7C6D0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="48" y="273" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start">Calendar alignment</text>
+<text x="48" y="310" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start">Log returns &amp; features</text>
+<text x="48" y="347" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start">Past observations only</text>
+<polyline points="48,368 290,368" fill="none" stroke="#B7C6D0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="48" y="406" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="22.5" font-weight="400" text-anchor="start">TSFMs: 512-day inputs</text>
+<text x="392" y="148" fill="#183249" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Zero-shot TSFMs</text>
+<text x="392" y="187" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start">Chronos-T5 Base</text>
+<text x="392" y="224" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start">Financial Chronos</text>
+<text x="392" y="261" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start">Chronos-2</text>
+<text x="392" y="343" fill="#183249" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Benchmarks</text>
+<text x="392" y="376" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="22.5" font-weight="400" text-anchor="start">Feature-based classifiers</text>
+<text x="392" y="408" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="22.5" font-weight="400" text-anchor="start">Competition methods + naive</text>
+<text x="939.5" y="146" fill="#183249" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">20-day return scenarios</text>
+<polyline points="939.5,158 939.5,182" fill="none" stroke="#526777" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="939.500,182.000 944.000,171.500 935.000,171.500" fill="#526777"/>
+<text x="939.5" y="210" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="middle">Cross-sectional ranks</text>
+<polyline points="939.5,220 939.5,243" fill="none" stroke="#526777" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="939.500,243.000 944.000,232.500 935.000,232.500" fill="#526777"/>
+<text x="939.5" y="271" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="middle">Quintile frequencies</text>
+<text x="939.5" y="362" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle">Five probabilities per asset</text>
+<rect x="791" y="378" width="54" height="35" rx="5" fill="#304F65" stroke="none" stroke-width="1.6"/>
+<text x="818" y="403" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" text-anchor="middle">p1</text>
+<rect x="851" y="378" width="54" height="35" rx="5" fill="#304F65" stroke="none" stroke-width="1.6"/>
+<text x="878" y="403" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" text-anchor="middle">p2</text>
+<rect x="911" y="378" width="54" height="35" rx="5" fill="#304F65" stroke="none" stroke-width="1.6"/>
+<text x="938" y="403" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" text-anchor="middle">p3</text>
+<rect x="971" y="378" width="54" height="35" rx="5" fill="#304F65" stroke="none" stroke-width="1.6"/>
+<text x="998" y="403" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" text-anchor="middle">p4</text>
+<rect x="1031" y="378" width="54" height="35" rx="5" fill="#304F65" stroke="none" stroke-width="1.6"/>
+<text x="1058" y="403" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" text-anchor="middle">p5</text>
+<text x="1341" y="153" fill="#183249" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle">Ranked Probability</text>
+<text x="1341" y="190" fill="#183249" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle">Score (RPS)</text>
+<text x="1341" y="230" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="middle">12 M6 rounds</text>
+<rect x="1188" y="316" width="306" height="94" rx="7" fill="#FFFFFF" stroke="#B7C6D0" stroke-width="1.4"/>
+<text x="1341" y="354" fill="#183249" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Official M6 outcomes</text>
+<text x="1341" y="389" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="22.5" font-weight="400" text-anchor="middle">Evaluation only</text>
+<polyline points="1341,316 1341,254" fill="none" stroke="#526777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="1341.000,254.000 1336.500,264.500 1345.500,264.500" fill="#526777"/>
+<polyline points="314,263 340,263" fill="none" stroke="#183249" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="340" cy="263" r="3.1" fill="#183249"/>
+<polyline points="340,263 340,197 368,197" fill="none" stroke="#183249" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="368.000,197.000 357.500,192.500 357.500,201.500" fill="#183249"/>
+<polyline points="340,263 340,371 368,371" fill="none" stroke="#183249" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="368.000,371.000 357.500,366.500 357.500,375.500" fill="#183249"/>
+<polyline points="713,197 767,197" fill="none" stroke="#183249" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="767.000,197.000 756.500,192.500 756.500,201.500" fill="#183249"/>
+<polyline points="713,381 767,381" fill="none" stroke="#183249" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="767.000,381.000 756.500,376.500 756.500,385.500" fill="#183249"/>
+<polyline points="939.5,284 939.5,330" fill="none" stroke="#183249" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="939.500,330.000 944.000,319.500 935.000,319.500" fill="#183249"/>
+<polyline points="1112,381 1139,381 1139,197 1166,197" fill="none" stroke="#183249" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="1166.000,197.000 1155.500,192.500 1155.500,201.500" fill="#183249"/>
+<polyline points="1278,432 1278,470 380,470 380,518" fill="none" stroke="#183249" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="380.000,518.000 384.500,507.500 375.500,507.500" fill="#183249"/>
+<rect x="24" y="518" width="712" height="234" rx="10" fill="#FCF7EE" stroke="#D2B684" stroke-width="1.6"/>
+<rect x="802" y="518" width="714" height="234" rx="10" fill="#EFF8F6" stroke="#99C5BE" stroke-width="1.6"/>
+<rect x="48" y="531" width="40" height="36" rx="7" fill="#9B671C" stroke="none" stroke-width="1.6"/>
+<text x="68" y="558" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22.5" font-weight="700" text-anchor="middle">02</text>
+<text x="104" y="558" fill="#9B671C" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">DIAGNOSE</text>
+<text x="712" y="558" fill="#9B671C" font-family="Arial, Helvetica, sans-serif" font-size="22.5" font-weight="400" text-anchor="end">Retrospective</text>
+<rect x="826" y="531" width="40" height="36" rx="7" fill="#137B72" stroke="none" stroke-width="1.6"/>
+<text x="846" y="558" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="22.5" font-weight="700" text-anchor="middle">03</text>
+<text x="882" y="558" fill="#137B72" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">INTERVENE</text>
+<polyline points="48,581 712,581" fill="none" stroke="#DDC8A5" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="826,581 1492,581" fill="none" stroke="#B8D8D1" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="56" cy="613" r="3.1" fill="#9B671C"/>
+<text x="74" y="621" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="start">Scenario-construction checks</text>
+<circle cx="56" cy="657" r="3.1" fill="#9B671C"/>
+<text x="74" y="665" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="start">Confidence, accuracy &amp; calibration</text>
+<circle cx="56" cy="701" r="3.1" fill="#9B671C"/>
+<text x="74" y="709" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="start">Horizon effects &amp; probability shrinkage</text>
+<text x="826" y="616" fill="#137B72" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="start">Chronos-T5 Base &amp; Financial Chronos</text>
+<text x="826" y="649" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start">Temperature &amp; top-k sampling</text>
+<text x="826" y="695" fill="#137B72" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="start">Chronos-2</text>
+<text x="826" y="728" fill="#31485A" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start">Ordinary &amp; uncertainty-regularised LoRA</text>
+<polyline points="736,635 802,635" fill="none" stroke="#183249" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="802.000,635.000 791.500,630.500 791.500,639.500" fill="#183249"/>
+<polyline points="1475,518 1475,432" fill="none" stroke="#137B72" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7,5"/>
+<polygon points="1475.000,432.000 1470.500,442.500 1479.500,442.500" fill="#137B72"/>
+<text x="1455" y="493" fill="#137B72" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="end">Re-evaluate</text>
+</svg>

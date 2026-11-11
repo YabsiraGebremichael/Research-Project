@@ -1,0 +1,73 @@
+# Secrets - never commit API tokens
+.env
+*.env
+proj.env
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# OS and editor
+Thumbs.db
+.DS_Store
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------------------
+# Provider market data and anything derived row-by-row from it.
+# Not redistributable. Regenerate with scripts/pipeline/ and a provider key.
+# ---------------------------------------------------------------------------
+Data/raw/yahoo/
+Data/raw/dataset_d_eodhd/
+Data/raw/recovered_sources/
+Data/processed/
+Data/contexts/
+Data/validation_contexts/*_context.csv
+TSFM Uncertainty Experiment/data/
+
+# Third-party reference implementations and reference data, kept locally.
+Relevant Context/
+Quasi-Average Reimplementation/
+Competition Benchmark/
+Competition Benchmark Reference/
+FinQ-Boost/
+RPS Reference/
+FinQ Boost Reimplementation/validation/
+
+# ---------------------------------------------------------------------------
+# Research report: sources, PDFs and LaTeX build artefacts, kept locally.
+# ---------------------------------------------------------------------------
+Research Report/
+Research Report Revised/
+Report Revised 2/
+Report Revised 3/
+Report Revised 4/
+Report Revised Improvements/
+Report Revised Clean Improvements/
+Report Revised Clean Improvements Final/
+*.aux
+*.bbl
+*.blg
+*.out
+*.synctex.gz
+*.toc
+*.fdb_latexmk
+*.fls
+
+# ---------------------------------------------------------------------------
+# Internal working material, kept locally.
+# ---------------------------------------------------------------------------
+Temporary/
+check/
+tests/
+CLAUDE.md
+
+# Generated run output: logs and narrative reports are rebuilt by the scripts.
+logs/
+reports/
+*.log
+
+# Derived adjusted-close panel, rebuilt by quasi_average.py from Dataset D.
+Quasi-Average Reimplementation DRE-as-Stock/data/
