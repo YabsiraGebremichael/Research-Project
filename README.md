@@ -429,7 +429,6 @@ It checks the bootstrap and permutation implementations, the Holm correction, th
 
 **`Statistical Analysis/paired_rps_analysis.py` must have run first.** Part of the suite verifies the generated files in `Statistical Analysis/results/`, so on a fresh clone the test has nothing to check and will fail until stage 16 has produced them.
 
-This is a focused test of the statistical layer. There is no automated end-to-end test of the full pipeline.
 
 ## Optional diagnostics
 
