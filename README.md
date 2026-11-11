@@ -319,13 +319,7 @@ Download their outputs into `TSFM Uncertainty Experiment/model_outputs/` as well
 
 ### Stage 14: Chronos-2 low-rank adaptation
 
-The extended panel is only needed here. Smoke-test the download before committing to all 100 assets:
-
-```bash
-python "FinQ Boost Reimplementation/download_extended_eodhd.py" --limit 3
-```
-
-Inspect `TSFM Uncertainty Experiment/data/extended_eodhd_status.csv`, then run the full download:
+The extended panel is only needed here. Generate it with:
 
 ```bash
 python "FinQ Boost Reimplementation/download_extended_eodhd.py"
